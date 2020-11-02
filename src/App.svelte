@@ -1,4 +1,6 @@
 <script lang="ts">
+import "primeicons/primeicons.css";
+
 import ButtonDemo from "./showcase/button/ButtonDemo.svelte";
 
 let currCount: number = 0;
