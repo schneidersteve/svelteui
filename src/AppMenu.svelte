@@ -2,12 +2,12 @@
     <div class="layout-menu">
         <div class="menu-category">Button</div>
         <div class="menu-items">
-            Button
+            <a href="#/button">Button</a>
         </div>
 
         <div class="menu-category">Form</div>
         <div class="menu-items">
-            Checkbox
+            <a href="#/checkbox">Checkbox</a>
         </div>
     </div>
 </div>

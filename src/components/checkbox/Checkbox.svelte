@@ -10,14 +10,23 @@
     class="{className? className : ""}"
     class:p-checkbox={true}
     class:p-component={true}
+    class:p-checkbox-checked={checked}
 >
     <div class="p-hidden-accessible">
         <input type="checkbox" bind:checked={checked} {id}/>
     </div>
-<!--      <div ref="box" :class="['p-checkbox-box', {'p-highlight': checked, 'p-disabled': $attrs.disabled, 'p-focus': focused}]" role="checkbox" :aria-checked="checked">
-         <span :class="['p-checkbox-icon', {'pi pi-check': checked}]"></span>
-     </div>
- --></div>
+    <div
+        class:p-checkbox-box={true}
+        class:p-highlight={checked}
+        role="checkbox"
+    >
+         <span
+             class:p-checkbox-icon={true}
+             class:pi={checked}
+             class:pi-check={checked}
+         />
+    </div>
+</div>
 
  <style>
 .p-checkbox {
