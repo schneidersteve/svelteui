@@ -1,4 +1,15 @@
-.p-button {
+.p-checkbox {
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: bottom;
+}
+
+.p-checkbox-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.p-button {
     margin: 0;
     display: inline-flex;
     cursor: pointer;
@@ -65,15 +76,4 @@
 .p-buttonset .p-button:focus {
     position: relative;
     z-index: 1;
-}.p-checkbox {
-    display: inline-flex;
-    cursor: pointer;
-    user-select: none;
-    vertical-align: bottom;
-}
-
-.p-checkbox-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
