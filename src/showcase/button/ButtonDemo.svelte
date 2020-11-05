@@ -1,4 +1,6 @@
 <script lang="ts">
+    import "./ButtonDemo.scss";
+
     import Button from "../../components/button/Button.svelte";
 </script>
 
@@ -127,15 +129,3 @@
         </div>
     </div>
 </div>
-
-<style scoped>
-:global(.p-button) {
-    margin-right: .5rem;
-}
-@media screen and (max-width: 960px) {
-    :global(.p-button) {
-        display: flex;
-        width: 100%;
-    }
-}
-</style>
