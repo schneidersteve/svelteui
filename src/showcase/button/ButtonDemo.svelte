@@ -108,8 +108,8 @@
             <Button icon="pi pi-times" className="p-button-rounded p-button-danger p-button-outlined" />
 
             <h5>Badges</h5>
-            <Button type="button" label="Emails" badge="8" />
-            <Button type="button" label="Messages" icon="pi pi-users" className="p-button-warning" badge="8" badgeClass="p-badge-danger" />
+            <Button label="Emails" badge="8" />
+            <Button label="Messages" icon="pi pi-users" className="p-button-warning" badge="8" badgeClass="p-badge-danger" />
 
             <h5>Button Set</h5>
             <span class="p-buttonset">
@@ -120,10 +120,22 @@
 
             <h5>Sizes</h5>
             <div class="sizes">
-                <Button label="Small" icon="pi pi-check" class="p-button-sm"  />
-                <Button label="Normal" icon="pi pi-check" class="p-button"  />
-                <Button label="Large" icon="pi pi-check" class="p-button-lg" />
+                <Button label="Small" icon="pi pi-check" className="p-button-sm"  />
+                <Button label="Normal" icon="pi pi-check" className="p-button"  />
+                <Button label="Large" icon="pi pi-check" className="p-button-lg" />
             </div>
         </div>
     </div>
 </div>
+
+<style scoped>
+:global(.p-button) {
+    margin-right: .5rem;
+}
+@media screen and (max-width: 960px) {
+    :global(.p-button) {
+        display: flex;
+        width: 100%;
+    }
+}
+</style>

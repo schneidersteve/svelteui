@@ -1,4 +1,6 @@
 <script lang="ts">
+    import "./Checkbox.css";
+
     export let className: string;
     export let id: string;
     export let disabled: boolean;
@@ -27,18 +29,3 @@
          />
     </div>
 </div>
-
- <style>
-.p-checkbox {
-    display: inline-flex;
-    cursor: pointer;
-    user-select: none;
-    vertical-align: bottom;
-}
-
-.p-checkbox-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-</style>
