@@ -2,13 +2,14 @@
 	import AppTopBar from "./AppTopBar.svelte";
 	import AppMenu from "./AppMenu.svelte";
 
+	import Home from "./showcase/Home.svelte";
 	import ButtonDemo from "./showcase/button/ButtonDemo.svelte";
 	import CheckboxDemo from "./showcase/checkbox/CheckboxDemo.svelte";
 
 	import Router from "svelte-spa-router";
 
 	const routes = {
-		'/': ButtonDemo,
+		'/': Home,
 		'/button': ButtonDemo,
 		'/checkbox': CheckboxDemo
 	}
