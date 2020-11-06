@@ -1,7 +1,9 @@
 <script lang="ts">
     import "./Checkbox.css";
 
-    export let className: string;
+    let className: string;
+    export { className as class };
+
     export let id: string;
     export let disabled: boolean;
     export let name: string;

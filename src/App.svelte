@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { sidebarActive } from "./store";
+
 	import AppTopBar from "./AppTopBar.svelte";
 	import AppMenu from "./AppMenu.svelte";
 
@@ -14,28 +16,8 @@
 		'/checkbox': CheckboxDemo
 	}
 
-	let sidebarActive:boolean = false;
-
-	function onMenuButtonClick() {
-		if (sidebarActive) {
-			sidebarActive = false;
-			removeClass(document.body, "blocked-scroll");
-		}
-		else {
-			sidebarActive = true;
-			addClass(document.body, "blocked-scroll");
-		}
-	}
-
-	function onMenuItemClick() {
-		sidebarActive = false;
-		removeClass(document.body, "blocked-scroll");
-	}
-
-	function onMaskClick() {
-		sidebarActive = false;
-		removeClass(document.body, "blocked-scroll");
-	}
+$:	if ($sidebarActive) addClass(document.body, "blocked-scroll");
+	else removeClass(document.body, "blocked-scroll");
 
 	function addClass(element, className) {
         if (element.classList)
@@ -50,12 +32,16 @@
         else
             element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
+
+	function onMaskClick() {
+		sidebarActive.set(false);
+	}
 </script>
 
 <div class="layout-wrapper">
-	<AppTopBar on:click="{onMenuButtonClick}"/>
-	<AppMenu isactive={sidebarActive} on:click={onMenuItemClick}/>
-	<div class="layout-mask" class:layout-mask-active={sidebarActive} on:click={onMaskClick}/>
+	<AppTopBar/>
+	<AppMenu/>
+	<div class="layout-mask" class:layout-mask-active={$sidebarActive} on:click={onMaskClick}/>
 	<div class="layout-content">
 		<Router {routes}/>
 	</div>

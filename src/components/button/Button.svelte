@@ -1,7 +1,9 @@
 <script lang="ts">
     import "./Button.css";
 
-    export let className: string;
+    let className: string;
+    export { className as class };
+
     export let disabled: boolean;
 
     export let label: string;

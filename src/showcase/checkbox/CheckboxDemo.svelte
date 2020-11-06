@@ -47,7 +47,6 @@
                     <label for={category.key}>{category.name}</label>
                 </div>
             {/each}
-
         </div>
     </div>
 </div>
