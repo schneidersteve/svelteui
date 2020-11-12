@@ -10,6 +10,7 @@ This project is inspired by [PrimeVue](https://www.primefaces.org/primevue) and 
 
 * Button
 * Checkbox (partial)
+* DataTable (partial)
 
 ## Contribution
 

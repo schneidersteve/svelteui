@@ -18,5 +18,10 @@
         <div class="menu-items">
             <a href="#/checkbox" on:click={onMenuItemClick} use:active={{className: "router-link-active router-link-exact-active"}}>Checkbox</a>
         </div>
+
+        <div class="menu-category">DataTable</div>
+        <div class="menu-items">
+            <a href="#/basicdatatable" on:click={onMenuItemClick} use:active={{className: "router-link-active router-link-exact-active"}}>Basic </a>
+        </div>
     </div>
 </div>

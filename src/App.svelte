@@ -7,13 +7,15 @@
 	import Home from "./showcase/Home.svelte";
 	import ButtonDemo from "./showcase/button/ButtonDemo.svelte";
 	import CheckboxDemo from "./showcase/checkbox/CheckboxDemo.svelte";
+	import DataTableBasicDemo from "./showcase/datatable/DataTableBasicDemo.svelte";
 
 	import Router from "svelte-spa-router";
 
 	const routes = {
 		'/': Home,
 		'/button': ButtonDemo,
-		'/checkbox': CheckboxDemo
+		'/checkbox': CheckboxDemo,
+		'/basicdatatable': DataTableBasicDemo
 	}
 
 $:	if ($sidebarActive) addClass(document.body, "blocked-scroll");
