@@ -8,6 +8,7 @@
 	import ButtonDemo from "./showcase/button/ButtonDemo.svelte";
 	import CheckboxDemo from "./showcase/checkbox/CheckboxDemo.svelte";
 	import DataTableBasicDemo from "./showcase/datatable/DataTableBasicDemo.svelte";
+	import TreeTableBasicDemo from "./showcase/treetable/TreeTableBasicDemo.svelte";
 
 	import Router from "svelte-spa-router";
 
@@ -15,7 +16,8 @@
 		'/': Home,
 		'/button': ButtonDemo,
 		'/checkbox': CheckboxDemo,
-		'/basicdatatable': DataTableBasicDemo
+		'/basicdatatable': DataTableBasicDemo,
+		'/basictreetable': TreeTableBasicDemo
 	}
 
 $:	if ($sidebarActive) addClass(document.body, "blocked-scroll");

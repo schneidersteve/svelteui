@@ -1,0 +1,13 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Svelte: Attach to Chrome",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "url": "http://localhost:5000/#/basictreetable",
+            "webRoot": "${workspaceFolder}/src"
+        }
+    ]
+}

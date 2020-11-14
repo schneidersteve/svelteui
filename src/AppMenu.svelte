@@ -21,7 +21,12 @@
 
         <div class="menu-category">DataTable</div>
         <div class="menu-items">
-            <a href="#/basicdatatable" on:click={onMenuItemClick} use:active={{className: "router-link-active router-link-exact-active"}}>Basic </a>
+            <a href="#/basicdatatable" on:click={onMenuItemClick} use:active={{className: "router-link-active router-link-exact-active"}}>Basic</a>
+        </div>
+
+        <div class="menu-category">TreeTable</div>
+        <div class="menu-items">
+            <a href="#/basictreetable" on:click={onMenuItemClick} use:active={{className: "router-link-active router-link-exact-active"}}>Basic</a>
         </div>
     </div>
 </div>

@@ -6,5 +6,5 @@
 </script>
 
 <td>
-    {rowData[column.field]}
+    <span>{rowData[column.field]}</span>
 </td>

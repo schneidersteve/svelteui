@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { onMount } from "svelte";
+
     import type Column from "../../components/column/Column";
 
     import DataTable from "../../components/datatable/DataTable.svelte";
@@ -13,7 +15,10 @@
         ];
 
     let products: any[];
-    new ProductService().getProductsSmall().then(data => products = data);
+
+    onMount(async () => {
+        new ProductService().getProductsSmall().then(data => products = data);
+    });
 </script>
 
 <div>

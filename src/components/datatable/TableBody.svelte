@@ -1,21 +1,19 @@
 <script lang="ts">
     import type Column from "../column/Column";
 
-    import BodyCell from "./BodyCell.svelte";
+    import BodyRow from "./BodyRow.svelte";
 
-    export let value: any[];
+    export let value: ReadonlyArray<any>;
     export let columns: ReadonlyArray<Column>;
-    export let empty: boolean;
+
+    let empty: boolean;
+ $: empty = !value || value.length === 0;
 </script>
 
 <tbody class="p-datatable-tbody">
     {#if !empty}
         {#each value as rowData, i}
-            <tr>
-                {#each columns as col, i}
-                    <BodyCell rowData={rowData} column={col}/>
-                {/each}
-            </tr>
+            <BodyRow value={value} rowData={rowData} columns={columns}/>
         {/each}
     {:else}
     {/if}
